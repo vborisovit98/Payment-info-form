@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Payment info form</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/Happy Bunch Avatar.png" alt="header-pic">
+            <span class="header-info">Payment info</span>
+        </header>
+        <main>
+            <form action="mailto:vborisovit98@gmail.com" method="post" enctype="text/plain" name="theForm">
+                <label for="fullName" class="userName">Full Name</label>
+                <input type="text" name="fullName" class="fullName" placeholder="Viktor Borisov" onkeyup="enableSubmit()">
+                <div class="full-name-err"></div>
+                <label for="creditCard" class="card">Credit Card Number</label>
+                <input type="text" name="creditCard" class="creditCard" placeholder="1234 1234 1234 1234">
+                <div class="credit-card-err"></div>
+                <img src="assets/Vector.png" alt="vector" class="vector">
+                <label for="expDate" class="expirationDate">Exp Date</label>
+                <input type="text" name="expDate" class="expiry" placeholder="MM/YY">
+                <label for="cvv" class="cvvCode">CVV</label>
+                <input type="text" name="cvv" class="cvv" placeholder="...">
+                <label for="zipCode" class="zip">Zip Code</label>
+                <input type="text" name="zipCode" class="zipCode" placeholder="9700">
+                <button class="confirmPayment" disabled>Confirm Payment</button>
+                <span class="verify">You verify that this info is correct</span>
+            </form>
+        </main>
+    </div>
+
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/node_modules/creditcard.js/dist/creditcard.js"></script>
+</body>
+</html>
